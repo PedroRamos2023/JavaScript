@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>País</h1>
+    Vivendo no <input type="text" name="país" id="país">.
+    <input type="button" value="Vereficar" onclick="Confirmar()">
+    <div id="res">
+        A
+    </div>
+    <script>
+        function Confirmar() {
+            var txtl= document.querySelector('input#país')
+            var res = document.querySelector('div#res')
+            var lugar = txtl.value;
+            if (lugar == 'Brasil') {
+                res.innerHTML += '<p>Tu é <strong>BR!</strong></p>'
+            } else {
+                res.innerHTML += '<p>Tu não é <strong>BR!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
